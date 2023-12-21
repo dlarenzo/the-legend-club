@@ -141,7 +141,7 @@ article p {
   font-size: 36px;
  }
 
- form input {
+ .join form input {
   margin: 20px 0;
   padding: 10px 20px;
   font-size: 24px;
@@ -262,8 +262,6 @@ article p {
                           Latest News & Contact Headers & Return Page
 ***********************************************************************************************/
 .return {
-  
-  border: 2px green dashed;
   text-align: center;
   padding: 10px 0;
   background-color: #0983bc;
@@ -273,7 +271,6 @@ article p {
 
 .up-to-date {
   margin-top: 105px;
-  border: 2px green dashed;
   text-align: center;
   padding: 10px 0;
   background-color: #1b9fdd;
@@ -293,10 +290,6 @@ article p {
 /************************************************************************************
                                     Latest News Page
 ************************************************************************************/
-.news-banner {
-  border: 2px red dashed;
-  
-}
 .news-container {
   width: 1100px;
   max-width: 100%;
@@ -354,7 +347,7 @@ article p {
   background-image: url(/img/banner-z.png);
   background-position: center;
   background-size:cover;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 
 .contact-form {
@@ -362,47 +355,71 @@ article p {
   width: 100%;
   margin: 0 auto;
   display: flex;
+  
 }
 
 .contact-form p {
   font-size: 48px;
   color: white;
+  text-shadow: 2px 2px #1b9fdd;
   font-weight: bold;
   width: 50%;
+  padding-right: 10px;
 }
-form {
+.contact-form form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
   background-color: #1b9fdd;
   padding: 25px 25px;
+  box-shadow: 10px 10px white;
 } 
+
 
 .form-section-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: flex;
+  margin-bottom: 15px;
 }
 
 .form-section-container label {
   font-weight: bold;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
-form .submit-btn {
+.form-section-container input {
+  border-radius: 25px;
+  padding: 15px 20px;
+  width: 60%;
+  
+}
+
+.form-section-container textarea {
+  border-radius: 25px;
+  padding: 15px;
+}
+.submit-btn {
   width: 50%;
-  margin: 30px auto;
-  background-color: #1b9fdd;
+  align-self: flex-end;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  padding: 15px 20px;
+  background-color: white;
 }
 
-form .submit-btn:hover {
+.submit-btn:hover {
   width: 50%;
   margin: 30px auto;
   background-color: #7bd4fc;
   text-decoration: underline;
   font-weight: bold;
 }
+
+
 /***************************************************************** 
                           Media Queries 
 *****************************************************************/
@@ -459,6 +476,19 @@ form .submit-btn:hover {
     width: 75%;
     padding: 20px 15px 20px 15px;
   }
+
+  .contact-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form p {
+    width: 80%;
+    text-align: center;
+  }
+  .contact-form form {
+    width: 80%;
+  }
   
 }
 
@@ -494,6 +524,10 @@ form .submit-btn:hover {
     width: 100%;
     padding: 20px 0;
   }
+
+  .contact-form p {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-width: 560px){
@@ -503,6 +537,10 @@ form .submit-btn:hover {
   .return {
     position: block;
     top: 0;
+  }
+
+  .form-section-container input{
+    width: 100%;
   }
 }
 
